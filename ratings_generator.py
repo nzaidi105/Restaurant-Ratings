@@ -1,7 +1,3 @@
-""" Mitchell Biderberg, Nasir Zaidi, Nkunim Antwi, Nur Mulugeta"""
-
-
-"""Final Project: Resturant Ratings Generator  """
 import pandas as pd
 import matplotlib.pyplot as plt
 from argparse import ArgumentParser
@@ -48,13 +44,13 @@ class Zomato_Data:
         specifications set then validates each of these values 
         (calling input_parser after each input)
          Args:
-            City (list/df) - input varible taking in
+            city (list/df) - input var taking in
                               the user's location prefrence
-            cuisine (list/df) - input varibale taking in
+            cuisine (list/df) - input var taking in
                               the users cuisine prefrences
-            Price (list/df) - input variable taking in
+            Price (list/df) - input var taking in
                               the users price range prefence  
-            Ratings (list/df) - input variable taking in 
+            Ratings (list/df) - input var taking in 
                                 the star reviews prefrence  
          Returns:
             Input_list (list) - List of all the user inputted values  
@@ -99,7 +95,7 @@ class Zomato_Data:
     
     def df_cleaner(self):
         """
-        Function that takes the raw Df and cleans it up
+        Takes the raw Df and cleans it up
         for presentation quality
         Return:
             self.clean_df (dataframe): the cleaned up dataframe 
@@ -121,7 +117,7 @@ class Zomato_Data:
     
     def df_match(self):
         """
-        Function that takes the DF from clean_df found in the df_specifics 
+        Pulls the DF from clean_df found in the df_specifics 
         function and the List from input_rating compares them, searching for
         any and all matches
          Returns:
@@ -179,6 +175,7 @@ def parse_args(arglist):
     parser = ArgumentParser()
     parser.add_argument("filename",
                         help="the name of the file that has the Yelp data")
+    
     return parser.parse_args(arglist)
 
 if __name__ == "__main__":
